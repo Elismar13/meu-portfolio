@@ -7,7 +7,7 @@ import Contact from './components/Contact';
 
 export default function Home() {
   return (
-    <main lang="en" max-w-screen-lg mx-auto>
+    <main lang="en">
       <Header />
       <Me />
       <About />

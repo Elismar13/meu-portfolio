@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
-    <header className="fixed top-0 z-50 flex justify-between items-center w-full p-4 bg-gray-800 text-white">
+    <header className="fixed top-0 z-50 flex justify-between items-center w-full p-4 bg-black text-white">
       <nav className="flex space-x-4">
         <Link href="#home" legacyBehavior>
           <a className="hover:text-blue-500">Home</a>
