@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimatedButton from './AnimatedButton';
 
 const Contact: React.FC = () => {
   return (
@@ -23,39 +24,49 @@ const Contact: React.FC = () => {
         </div>
         <div className="lg:w-2/3 w-full lg:ml-8">
           <form className="rounded-2xl bg-gray-800">
-            <div className="mb-4">
-              <input
-                className="w-full p-3 bg-gray-300 border rounded-2xl border-transparent placeholder-gray-600 text-black"
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Name"
-                required
-              />
+            <div className="grid grid-cols-2 gap-x-5" >
+              <div className="mb-4">
+                <input
+                  className="w-full p-3 bg-gray-300 border rounded-2xl border-transparent placeholder-gray-600 text-black"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <input
+                  className="w-full p-3 bg-gray-300 border rounded-2xl border-transparent placeholder-gray-600 text-black"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div className="mb-4 col-span-2">
+                <textarea
+                  className="w-full p-3 bg-gray-300 border rounded-2xl border-transparent placeholder-gray-600 text-black"
+                  id="subject"
+                  name="subject"
+                  rows={1}
+                  placeholder="Subject"
+                  required
+                ></textarea>
+              </div>
+              <div className="mb-4 col-span-2">
+                <textarea
+                  className="w-full p-3 bg-gray-300 border rounded-2xl border-transparent placeholder-gray-600 text-black"
+                  id="message"
+                  name="message"
+                  rows={4}
+                  placeholder="Message"
+                  required
+                ></textarea>
+              </div>
             </div>
-            <div className="mb-4">
-              <input
-                className="w-full p-3 bg-gray-300 border rounded-2xl border-transparent placeholder-gray-600 text-black"
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <textarea
-                className="w-full p-3 bg-gray-300 border rounded-2xl border-transparent placeholder-gray-600 text-black"
-                id="message"
-                name="message"
-                rows={4}
-                placeholder="Message"
-                required
-              ></textarea>
-            </div>
-            <button className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">
-              Send
-            </button>
+            <AnimatedButton />
           </form>
         </div>
       </div>
