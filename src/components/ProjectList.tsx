@@ -11,7 +11,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
       {projects.map((project, index) => (
         <div
           key={index}
-          className="relative groud rounded shadow-md w-full max-w-md mx-auto"
+          className="relative group rounded shadow-md w-full max-w-md mx-auto"
         >
           <div className="relative w-full">
             <img
