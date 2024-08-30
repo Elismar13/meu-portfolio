@@ -2,7 +2,7 @@ import React from 'react';
 
 const Me: React.FC = () => {
   return (
-    <div className="header flex flex-col h-screen w-screen bg-gray-800 text-white py-8 text-center items-center justify-center">
+    <div className="header flex flex-col h-screen w-screen text-white py-8 text-center items-center justify-center">
       <h1 className="text-6xl font-bold">Elismar Silva</h1>
       <p className="mt-2 mb-4">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
       <div className="flex mt-4">

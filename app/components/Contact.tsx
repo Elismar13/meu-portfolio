@@ -3,7 +3,7 @@ import AnimatedButton from './AnimatedButton';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="w-full bg-gray-800 text-white p-8 flex justify-center">
+    <section id="contact" className="w-full text-white p-8 flex justify-center">
       <div className="max-w-4xl w-full flex flex-col lg:flex-row justify-between">
         <div className="flex flex-col justify-center lg:w-1/3 w-full mb-8 lg:mb-0">
           <h1 className="text-3xl font-bold mb-4">Get in Touch</h1>
@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
         <div className="lg:w-2/3 w-full lg:ml-8">
-          <form className="rounded-2xl bg-gray-800">
+          <form className="rounded-2xl">
             <div className="grid grid-cols-2 gap-x-5" >
               <div className="mb-4">
                 <input
