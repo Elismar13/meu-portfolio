@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectList from './ProjectList';
-import { projects } from '@/data/myProjects';
+import { projects } from '../../data/myProjects';
 
 const MyProjects: React.FC = () => {
   return (

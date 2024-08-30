@@ -8,26 +8,26 @@ export const projects: Project[] = [
   {
     title: "ASMonitor",
     link: "link_projeto",
-    image: "/asmonitor.png",
+    image: "..//src/assets/asmonitor.png",
   },
   {
     title: "Gethub",
     link: "link_projeto",
-    image: "/gethub.png",
+    image: "../src/assets/gethub.png",
   },
   {
     title: "inHome",
     link: "link_projeto",
-    image: "/inhome.png",
+    image: "../src/assets/inhome.png",
   },
   {
     title: "Transaction balance",
     link: "link_projeto",
-    image: "/transaction.png",
+    image: "../src/assets/transaction.png",
   },
   {
     title: "OpenSnake",
     link: "link_projeto",
-    image: "/opensnake.png",
+    image: "../src/assets/opensnake.png",
   }
 ];

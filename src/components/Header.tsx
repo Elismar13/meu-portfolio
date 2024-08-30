@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
-import Link from 'next/link';
 
 const Header: React.FC = () => {
-  // Verifica o tema atual no armazenamento local
   useEffect(() => {
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark');
@@ -25,12 +23,8 @@ const Header: React.FC = () => {
   return (
     <header className="fixed top-0 z-50 flex justify-between items-center w-full p-4 bg-white text-black dark:bg-black dark:text-white transition-colors duration-300">
       <nav className="flex space-x-4">
-        <Link href="#home" legacyBehavior>
-          <a className="hover:text-blue-500 dark:hover:text-blue-300">Home</a>
-        </Link>
-        <Link href="#projects" legacyBehavior>
-          <a className="hover:text-blue-500 dark:hover:text-blue-300">Projects</a>
-        </Link>
+        <a className="hover:text-blue-500 dark:hover:text-blue-300">Home</a>
+        <a className="hover:text-blue-500 dark:hover:text-blue-300">Projects</a>
       </nav>
       <div className="flex items-center space-x-4">
         <button
@@ -39,9 +33,7 @@ const Header: React.FC = () => {
         >
           Toggle Dark Mode
         </button>
-        <Link href="#resume" legacyBehavior>
-          <a className="hover:text-blue-500 dark:hover:text-blue-300">Access my resume</a>
-        </Link>
+        <a className="hover:text-blue-500 dark:hover:text-blue-300">Access my resume</a>
       </div>
     </header>
   );
