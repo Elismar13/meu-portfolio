@@ -22,7 +22,7 @@ html {
   @apply bg-white text-gray-700;
 }
 html.dark {
-  @apply bg-gray-900 text-gray-100;
+  @apply bg-gray-950 text-gray-100;
 }
 
 h1, h2, h3, h4, h5, h6, p, span {

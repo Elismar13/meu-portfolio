@@ -8,7 +8,7 @@ const AnimatedButton: React.FC = () => {
       type="submit"
     >
       <span className="absolute inset-0 w-full h-full bg-blue-500 transition-transform duration-500 ease-in-out transform translate-x-full group-hover:translate-x-0"></span>
-      <span className="relative z-10 text-gray-300 mr-6 transition-opacity duration-500 ease-in-out ">
+      <span className="relative z-10 text-gray-700 dark:text-gray-100 mr-6 transition-opacity duration-500 ease-in-out ">
         Send
       </span>
       <div className="relative rounded-full h-full p-4 bg-blue-500">
