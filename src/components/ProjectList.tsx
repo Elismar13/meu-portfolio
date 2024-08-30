@@ -1,6 +1,5 @@
-import { Project } from '@/data/myProjects';
-import Image from 'next/image';
 import React from 'react';
+import { Project } from '../../data/myProjects';
 
 interface ProjectListProps {
   projects: Project[];
@@ -8,18 +7,16 @@ interface ProjectListProps {
 
 const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 justify-center">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center content-center">
       {projects.map((project, index) => (
         <div
           key={index}
-          className="relative group p-4 rounded shadow-md w-full max-w-md mx-auto"
+          className="relative groud rounded shadow-md w-full max-w-md mx-auto"
         >
-          <div className="relative w-full h-60">
-            <Image
+          <div className="relative w-full">
+            <img
               src={project.image}
               alt={project.title}
-              layout="fill"
-              objectFit="cover"
               className="rounded-md group-hover:opacity-75 transition duration-300"
             />
           </div>

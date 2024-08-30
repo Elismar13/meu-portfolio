@@ -6,7 +6,7 @@ import SkillCard from './SkillCard';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="w-full flex text-white py-16 px-8">
+    <section id="about" className="w-full flex text-white py-8 px-8">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-extrabold mb-8">About Me</h2>
         <p className="text-lg mb-6">
@@ -49,10 +49,10 @@ const About: React.FC = () => {
           Confira alguns dos meus projetos no GitHub e LinkedIn:
         </p>
         <div className="flex justify-center mt-6 space-x-6">
-          <a href="#github" className="text-white hover:text-blue-500">
+          <a href="#github" className= " text-gray-700 dark:text-gray-100 hover:text-blue-500">
             <SiGithub size={32} />
           </a>
-          <a href="#linkedin" className="text-white hover:text-blue-500">
+          <a href="#linkedin" className="text-gray-700 dark:text-gray-100 hover:text-blue-500">
             <SiLinkedin size={32} />
           </a>
         </div>
