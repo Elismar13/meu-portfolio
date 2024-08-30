@@ -5,6 +5,7 @@ import About from './components/About';
 import MyProjects from './components/MyProjects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
+import DarkModeToggle from './components/DarkModeToggle';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <MyProjects />
       <Experience />
       <Contact />
+      <DarkModeToggle />
     </>
   );
 };
