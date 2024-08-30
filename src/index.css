@@ -11,7 +11,6 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,11 +18,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  @apply bg-slate-400 text-black;
+html {
+  @apply bg-white text-gray-700;
 }
-body.dark {
-  @apply bg-gray-900 text-white;
+html.dark {
+  @apply bg-gray-900 text-gray-100;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+  @apply text-gray-700 dark:text-gray-100;
 }
 
 a {
