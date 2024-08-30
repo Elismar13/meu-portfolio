@@ -1,12 +1,12 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaReact, FaNodeJs, FaJava, FaDatabase } from 'react-icons/fa';
-import { DiJavascript1, DiPython, DiPostgresql, DiMongodb } from 'react-icons/di';
-import { SiTypescript, SiExpress, SiSpring, SiFlask, SiQuarkus, SiHtml5, SiCss3, SiAngular } from 'react-icons/si';
+import { FaDatabase, FaJava } from 'react-icons/fa';
+import { SiGithub, SiLinkedin, SiReact, SiNodedotjs, SiMongodb, SiPostgresql } from 'react-icons/si';
+import { SiJavascript, SiPython, SiTypescript, SiExpress, SiSpring, SiFlask, SiQuarkus, SiHtml5, SiCss3, SiAngular } from 'react-icons/si';
 import SkillCard from './SkillCard';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="w-full flex text-white py-16 px-8 bg-gray-900">
+    <section id="about" className="w-full flex text-white py-16 px-8">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-extrabold mb-8">About Me</h2>
         <p className="text-lg mb-6">
@@ -15,27 +15,27 @@ const About: React.FC = () => {
 
         <h3 className="text-3xl font-semibold mb-4">Skills</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
-          <SkillCard title="Backend">
-            <FaJava size={36} />
-            <FaNodeJs size={36} />
-            <DiPython size={36} />
-            <SiSpring size={36} />
-            <SiQuarkus size={36} />
-            <SiExpress size={36} />
-            <SiFlask size={36} />
-          </SkillCard>
           <SkillCard title="Frontend">
-            <DiJavascript1 size={36} />
-            <FaReact size={36} />
-            <SiAngular size={36} />
-            <SiTypescript size={36} />
-            <SiHtml5 size={36} />
-            <SiCss3 size={36} />
+            <SiJavascript size={32} />
+            <SiReact size={32} />
+            <SiAngular size={32} />
+            <SiTypescript size={32} />
+            <SiHtml5 size={32} />
+            <SiCss3 size={32} />
+          </SkillCard>
+          <SkillCard title="Backend">
+            <FaJava size={32} />
+            <SiNodedotjs size={32} />
+            <SiPython size={32} />
+            <SiSpring size={32} />
+            <SiQuarkus size={32} />
+            <SiExpress size={32} />
+            <SiFlask size={32} />
           </SkillCard>
           <SkillCard title="Database">
-            <DiPostgresql size={36} />
-            <DiMongodb size={36} />
-            <FaDatabase size={36} />
+            <SiPostgresql size={32} />
+            <SiMongodb size={32} />
+            <FaDatabase size={32} />
           </SkillCard>
         </div>
 
@@ -50,10 +50,10 @@ const About: React.FC = () => {
         </p>
         <div className="flex justify-center mt-6 space-x-6">
           <a href="#github" className="text-white hover:text-blue-500">
-            <FaGithub size={30} />
+            <SiGithub size={32} />
           </a>
           <a href="#linkedin" className="text-white hover:text-blue-500">
-            <FaLinkedin size={30} />
+            <SiLinkedin size={32} />
           </a>
         </div>
       </div>
