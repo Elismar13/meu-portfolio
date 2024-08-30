@@ -6,7 +6,7 @@ import SkillCard from './SkillCard';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="w-full flex text-white py-16 px-8">
+    <section id="about" className="w-full flex text-white py-8 px-8">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-extrabold mb-8">About Me</h2>
         <p className="text-lg mb-6">
