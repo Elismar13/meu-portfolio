@@ -5,12 +5,12 @@ import { FiSun, FiMoon, FiSettings } from 'react-icons/fi';
 import { FaTimes, FaPalette } from 'react-icons/fa';
 
 const DarkModeToggle: React.FC = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, color, toggleTheme, setColor } = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(true);
-  const [selectedColor, setSelectedColor] = useState<string>('blue'); // Cor padrão
+  const [selectedColor, setSelectedColor] = useState<string>(color);
 
   const applyColor = (color: string) => {
-    document.documentElement.style.setProperty('--highlight-color', color);
+    setColor(color);
     setSelectedColor(color);
   };
 
@@ -26,7 +26,7 @@ const DarkModeToggle: React.FC = () => {
     <>
       <div className={`fixed left-0 top-24 shadow-lg w-44 max-w-44 bg-gray-300 dark:bg-gray-800 p-4 transition-transform transform rounded-r-xl ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <div className="flex justify-between items-center mb-2">
-          <h3 className="font-bold mb-2">Dark Mode</h3>
+          <h3 className={`font-bold mb-2 ${theme === 'dark' ? 'text-gray-100' : 'text-gray-900'}`}>Dark Mode</h3>
           <div className="absolute top-3 right-3 flex space-x-2">
             <button
               onClick={handleClose}
@@ -52,7 +52,7 @@ const DarkModeToggle: React.FC = () => {
             </>
           )}
         </button>
-        <h4 className="font-bold mb-2">Style Switcher</h4>
+        <h4 className={`font-bold mb-2 ${theme === 'dark' ? 'text-gray-100' : 'text-gray-900'}`}>Style Switcher</h4>
         <div className="grid grid-cols-4 gap-1">
           {Object.keys(COLORS).map((key) => (
             <button
@@ -69,9 +69,9 @@ const DarkModeToggle: React.FC = () => {
       {!isOpen && (
         <button
           onClick={handleOpen}
-          className="fixed left-0 top-24 p-2 bg-gray-300 dark:bg-gray-800 text-white rounded-r-lg"
+          className={`fixed left-0 top-24 p-2 ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'} text-white rounded-r-lg`}
         >
-          <FiSettings size={24} className="dark:text-gray-300 text-gray-700"/>
+          <FiSettings size={24} className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`} />
         </button>
       )}
     </>

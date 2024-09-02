@@ -2,13 +2,16 @@ import React, { createContext, useState, useEffect } from 'react';
 
 export interface ThemeContextProps {
   theme: string;
+  color: string;
   toggleTheme: () => void;
+  setColor: (color: string) => void;
 }
 
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<string>('light');
+  const [color, setColor] = useState<string>('#3490dc');
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -30,8 +33,13 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     localStorage.setItem('theme', newTheme);
   };
 
+  const changeColor = (newColor: string) => {
+    setColor(newColor);
+    document.documentElement.style.setProperty('--highlight-color', newColor);
+  };
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, color, toggleTheme, setColor: changeColor }}>
       {children}
     </ThemeContext.Provider>
   );

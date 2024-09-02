@@ -1,7 +1,12 @@
-import React from 'react';
+import React, {  useContext } from 'react';
 import AnimatedButton from './AnimatedButton';
+import ThemeContext from '../context/ThemeContext';
+import { COLORS } from '../constants/colors';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Contact: React.FC = () => {
+  const { color } = useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
+
   return (
     <section id="contact" className="w-full text-white p-8 flex justify-center">
       <div className="max-w-4xl w-full flex flex-col lg:flex-row justify-between">
@@ -12,10 +17,8 @@ const Contact: React.FC = () => {
             If you liked my work, please fill out the form on the side and send me an email. If you prefer, you can also contact me via WhatsApp below:
           </p>
           <div className="flex items-center mb-2">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10l6.29 6.29a1 1 0 001.42 0L21 6" />
-            </svg>
-            <div>
+            <FaWhatsapp size={28} color={color} />
+            <div className="ml-3">
               <span>WhatsApp</span>
               <br />
               <span>(83) 98748-8476</span>

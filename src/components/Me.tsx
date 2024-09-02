@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ThemeContext from '../context/ThemeContext';
+import { COLORS } from '../constants/colors';
 
 const Me: React.FC = () => {
+  const { color } = useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
+
   return (
     <div className="header flex flex-col h-screen w-screen py-8 text-center items-center justify-center">
-      <h1 className="text-6xl font-bold">Elismar Silva</h1>
+      <h1 className="text-6xl font-bold" style={{ color }}>
+        Elismar Silva
+      </h1>
       <p className="mt-2 mb-4">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
       <div className="flex mt-4">
         <a href="#linkedin" className="hover:text-blue-500 mx-2">
