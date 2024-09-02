@@ -11,17 +11,17 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
       <div className="relative bg-white dark:bg-gray-800 p-6 text-left rounded-2xl shadow-lg max-w-md w-full">
-        <div className="absolute top-3 right-3 flex space-x-2">
+        <div className="absolute top-3 right-3 flex space-x-3">
           <button
             onClick={onClose}
-            className="w-5 h-5 flex items-center justify-center bg-yellow-500 rounded-full hover:bg-yellow-600 focus:outline-none"
+            className="w-6 h-6 flex items-center justify-center bg-yellow-500 rounded-full hover:bg-yellow-600 focus:outline-none"
             aria-label="Minimizar"
           >
             <FaMinus className="text-white text-xs" />
           </button>
           <button
             onClick={onClose}
-            className="w-5 h-5 flex items-center justify-center bg-red-500 rounded-full hover:bg-red-600 focus:outline-none"
+            className="w-6 h-6 flex items-center justify-center bg-red-500 rounded-full hover:bg-red-600 focus:outline-none"
             aria-label="Fechar"
           >
             <FaTimes className="text-white text-xs" />
