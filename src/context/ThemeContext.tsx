@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 
-interface ThemeContextProps {
+export interface ThemeContextProps {
   theme: string;
   toggleTheme: () => void;
 }

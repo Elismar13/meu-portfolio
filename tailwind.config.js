@@ -6,13 +6,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        blue: '#3490dc',
-        yellow: '#ffed4a',
-        red: '#e3342f',
-        green: '#38c172',
-        purple: '#6f42c1',
-        indigo: '#6574cd',
-        pink: '#f66d9b',
+        customBlue: '#3490dc',
+        customYellow: '#ffed4a',
+        customRed: '#e3342f',
+        customGreen: '#38c172',
+        customPurple: '#6f42c1',
+        customIndigo: '#6574cd',
+        customPink: '#f66d9b',
       }
     },
   },

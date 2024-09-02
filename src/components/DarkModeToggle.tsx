@@ -1,84 +1,81 @@
-import React, { useState, useEffect } from 'react';
-import { FiMoon, FiSun, FiSettings, FiX } from 'react-icons/fi';
+import React, { useContext, useState } from 'react';
+import ThemeContext from '../context/ThemeContext';
+import { COLORS } from '../constants/colors';
+import { FiSun, FiMoon } from 'react-icons/fi';
+import { FaTimes, FaPalette } from 'react-icons/fa';
 
-const SettingsPanel: React.FC = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+const DarkModeToggle: React.FC = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  const [isOpen, setIsOpen] = useState(true);
+  const [selectedColor, setSelectedColor] = useState<string>('blue'); // Cor padrão
 
-  useEffect(() => {
-    if (
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark');
-      setDarkMode(true);
-    } else {
-      document.documentElement.classList.remove('dark');
-      setDarkMode(false);
-    }
-  }, []);
-
-  const toggleDarkMode = () => {
-    setDarkMode((prevMode) => !prevMode);
-    document.documentElement.classList.toggle('dark', !darkMode);
-    localStorage.theme = !darkMode ? 'dark' : 'light';
+  const applyColor = (color: string) => {
+    document.documentElement.style.setProperty('--highlight-color', color);
+    setSelectedColor(color);
   };
 
-  const togglePanel = () => {
-    setIsOpen((prev) => !prev);
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  const handleOpen = () => {
+    setIsOpen(true);
   };
 
   return (
-    <div className="fixed left-0 top-24 z-50">
-      <button
-        className="p-4 bg-gray-600 text-white border rounded-r-none focus:outline-none"
-        onClick={togglePanel}
-      >
-        <FiSettings size={24} />
-      </button>
-
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-black bg-opacity-50"
-          onClick={togglePanel}
-        ></div>
-      )}
-
-      <div
-        className={`fixed top-24 left-0 z-50 bg-white dark:bg-gray-800 shadow-md transition-transform duration-300 transform ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
-        style={{ width: '250px' }}
-      >
-        <div className="p-4">
-          <button
-            className="absolute top-4 right-4 text-gray-600 dark:text-gray-300"
-            onClick={togglePanel}
-          >
-            <FiX size={24} />
-          </button>
-
-          <h2 className="text-xl font-bold mb-4">Configurações</h2>
-
-          <button
-            className="flex items-center space-x-2 mb-4"
-            onClick={toggleDarkMode}
-          >
-            {darkMode ? (
-              <FiSun className="text-yellow-500" size={24} />
-            ) : (
-              <FiMoon className="text-blue-400" size={24} />
-            )}
-            <span>{darkMode ? 'Modo Claro' : 'Modo Escuro'}</span>
-          </button>
-
-          <div>
-            <p>Configurações adicionais podem ser adicionadas aqui.</p>
+    <>
+      <div className={`fixed left-0 top-24 shadow-lg w-44 max-w-44 bg-gray-100 dark:bg-gray-800 p-4 transition-transform transform ${isOpen ? 'scale-x-100' : 'scale-x-0'}`}>
+        <div className="flex justify-between items-center mb-2">
+          <h3 className="font-bold mb-2">Dark Mode</h3>
+          <div className="absolute top-3 right-3 flex space-x-2">
+            <button
+              onClick={handleClose}
+              className="w-5 h-5 flex items-center justify-center bg-red-500 rounded-full hover:bg-red-600 focus:outline-none"
+              aria-label="Fechar"
+            >
+              <FaTimes className="text-white text-xs" />
+            </button>
           </div>
         </div>
+        <button onClick={toggleTheme} className="mb-4 flex items-center">
+          {theme === 'light' ? (
+            <>
+              <FiMoon className="text-blue-400 mr-2" size={20} />
+              <span className="mr-2">/</span>
+              <FiSun className="text-yellow-500" size={20} />
+            </>
+          ) : (
+            <>
+              <FiSun className="text-yellow-500 mr-2" size={20} />
+              <span className="mr-2">/</span>
+              <FiMoon className="text-blue-400" size={20} />
+            </>
+          )}
+        </button>
+        <h4 className="font-bold mb-2">Style Switcher</h4>
+        <div className="grid grid-cols-4 gap-1">
+          {Object.keys(COLORS).map((key) => (
+            <button
+              key={key}
+              onClick={() => applyColor(COLORS[key as keyof typeof COLORS])}
+              className="flex items-center justify-center w-8 h-8 rounded-full"
+              style={{ borderColor: key === selectedColor ? 'black' : 'transparent', borderWidth: '2px' }}
+            >
+              <FaPalette size={20} color={COLORS[key as keyof typeof COLORS]} />
+            </button>
+          ))}
+        </div>
       </div>
-    </div>
+      {!isOpen && (
+        <button
+          onClick={handleOpen}
+          className="fixed left-0 top-24 p-2 bg-gray-800 text-white rounded-r-lg"
+        >
+          Configurações
+        </button>
+      )}
+    </>
   );
 };
 
-export default SettingsPanel;
+export default DarkModeToggle;
