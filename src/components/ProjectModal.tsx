@@ -1,4 +1,3 @@
-// ProjectModal.tsx
 import React from 'react';
 import { Project } from '../../data/myProjects';
 import { FaMinus, FaTimes } from 'react-icons/fa';
@@ -11,7 +10,7 @@ interface ProjectModalProps {
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="relative bg-white dark:bg-gray-800 p-6 text-left rounded shadow-lg max-w-md w-full">
+      <div className="relative bg-white dark:bg-gray-800 p-6 text-left rounded-2xl shadow-lg max-w-md w-full">
         <div className="absolute top-3 right-3 flex space-x-2">
           <button
             onClick={onClose}
