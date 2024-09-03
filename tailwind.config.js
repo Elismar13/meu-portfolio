@@ -4,7 +4,18 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        CUSTOM_BLUE: '#3490dc',
+        CUSTOM_YELLOW: '#ffed4a',
+        CUSTOM_RED: '#d62828',
+        CUSTOM_GREEN: '#38c172',
+        CUSTOM_PURPLE: '#6f42c1',
+        CUSTOM_ORANGE: '#f6993f',
+        CUSTOM_CYAN: '#00bcd4',
+        CUSTOM_MAGENTA: '#e91e63',
+      }
+    },
   },
   plugins: [],
   darkMode: 'class',

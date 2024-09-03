@@ -6,10 +6,11 @@ import MyProjects from './components/MyProjects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import DarkModeToggle from './components/DarkModeToggle';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <Header />
       <Me />
       <About />
@@ -17,7 +18,7 @@ function App() {
       <Experience />
       <Contact />
       <DarkModeToggle />
-    </>
+    </ThemeProvider>
   );
 };
 

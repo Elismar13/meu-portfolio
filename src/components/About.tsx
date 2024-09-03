@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaDatabase, FaJava } from 'react-icons/fa';
 import { SiGithub, SiLinkedin, SiReact, SiNodedotjs, SiMongodb, SiPostgresql } from 'react-icons/si';
 import { SiJavascript, SiPython, SiTypescript, SiExpress, SiSpring, SiFlask, SiQuarkus, SiHtml5, SiCss3, SiAngular } from 'react-icons/si';
 import SkillCard from './SkillCard';
+import ThemeContext from '../context/ThemeContext';
+import { COLORS } from '../constants/colors';
 
 const About: React.FC = () => {
+  const { color } = useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
+
   return (
     <section id="about" className="w-full flex text-white py-8 px-8">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-extrabold text-center mb-8">About Me</h2>
+      <h2 className="text-4xl font-extrabold text-center mb-8">
+        About <span className="text-orange-500" style={{ color }}>Me</span>
+      </h2>
         <p className="text-lg mb-6">
           Olá, me chamo Elismar Silva e tenho 22 anos. Moro em Paraíba, Brasil.
         </p>
@@ -16,26 +22,26 @@ const About: React.FC = () => {
         <h3 className="text-2xl font-semibold text-center mb-4">Skills</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
           <SkillCard title="Frontend">
-            <SiJavascript size={32} />
-            <SiReact size={32} />
-            <SiAngular size={32} />
-            <SiTypescript size={32} />
-            <SiHtml5 size={32} />
-            <SiCss3 size={32} />
+            <SiJavascript size={32} color={ color } />
+            <SiReact size={32} color={ color } />
+            <SiAngular size={32} color={ color } />
+            <SiTypescript size={32} color={ color } />
+            <SiHtml5 size={32} color={ color } />
+            <SiCss3 size={32} color={ color } />
           </SkillCard>
           <SkillCard title="Backend">
-            <FaJava size={32} />
-            <SiNodedotjs size={32} />
-            <SiPython size={32} />
-            <SiSpring size={32} />
-            <SiQuarkus size={32} />
-            <SiExpress size={32} />
-            <SiFlask size={32} />
+            <FaJava size={32} color={ color } />
+            <SiNodedotjs size={32} color={ color } />
+            <SiPython size={32} color={ color } />
+            <SiSpring size={32} color={ color } />
+            <SiQuarkus size={32} color={ color } />
+            <SiExpress size={32} color={ color } />
+            <SiFlask size={32} color={ color } />
           </SkillCard>
           <SkillCard title="Databases">
-            <SiPostgresql size={32} />
-            <SiMongodb size={32} />
-            <FaDatabase size={32} />
+            <SiPostgresql size={32} color={ color } />
+            <SiMongodb size={32} color={ color } />
+            <FaDatabase size={32} color={ color } />
           </SkillCard>
         </div>
 
@@ -50,10 +56,10 @@ const About: React.FC = () => {
         </p>
         <div className="flex justify-center mt-6 space-x-6">
           <a href="#github" className= " text-gray-700 dark:text-gray-100 hover:text-blue-500">
-            <SiGithub size={32} />
+            <SiGithub size={32} color={ color } />
           </a>
           <a href="#linkedin" className="text-gray-700 dark:text-gray-100 hover:text-blue-500">
-            <SiLinkedin size={32} />
+            <SiLinkedin size={32} color={ color } />
           </a>
         </div>
       </div>
