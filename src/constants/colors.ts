@@ -1,6 +1,6 @@
 export const COLORS = {
   CUSTOM_BLUE: '#3490dc',
-  CUSTOM_YELLOW: '#ffed4a',
+  CUSTOM_YELLOW: '#fdc921',
   CUSTOM_RED: '#d62828',
   CUSTOM_GREEN: '#38c172',
   CUSTOM_PURPLE: '#6f42c1',

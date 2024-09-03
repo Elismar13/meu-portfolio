@@ -1,5 +1,7 @@
 // components/Experience.tsx
-import React from 'react';
+import React, { useContext } from 'react';
+import ThemeContext from '../context/ThemeContext';
+import { COLORS } from '../constants/colors';
 
 interface ExperienceItem {
   type: 'work' | 'education';
@@ -34,10 +36,12 @@ const experiences: ExperienceItem[] = [
 ];
 
 const Experience: React.FC = () => {
+  const { color } = useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
+
   return (
     <section id="experience" className="p-8">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center">Experience & Education</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center">Experience & <span style={{ color }}>Education</span></h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {experiences.map((exp, index) => (
             <div key={index} className="flex items-start space-x-4">

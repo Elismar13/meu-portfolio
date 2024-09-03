@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
     <section id="contact" className="w-full text-white p-8 flex justify-center">
       <div className="max-w-4xl w-full flex flex-col lg:flex-row justify-between">
         <div className="flex flex-col justify-center lg:w-1/3 w-full mb-8 lg:mb-0">
-          <h1 className="text-3xl font-bold mb-4">Get in Touch</h1>
+          <h1 className="text-3xl font-bold mb-4">Get in <span style={{ color }}>Touch</span></h1>
           <h3 className="text-2xl font-bold mb-4">Don't be Shy</h3>
           <p className="mb-4">
             If you liked my work, please fill out the form on the side and send me an email. If you prefer, you can also contact me via WhatsApp below:
