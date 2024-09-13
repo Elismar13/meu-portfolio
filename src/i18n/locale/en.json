@@ -21,6 +21,10 @@
     "subject": "Subject",
     "message": "Message"
   },
+  "experience": {
+    "title": "Experience & ",
+    "title2": "Education"
+  },
   "projects": {
     "title": "My ",
     "title2": "Projects",

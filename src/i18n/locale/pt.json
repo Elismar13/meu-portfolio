@@ -21,6 +21,10 @@
     "subject": "Assunto",
     "message": "Mensagem"
   },
+  "experience": {
+    "title": "Educação e ",
+    "title2": "Experiência"
+  },
   "projects": {
     "title": "Meus ",
     "title2": "Projetos",
