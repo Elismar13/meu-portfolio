@@ -1,4 +1,8 @@
 {
+  "me": {
+    "description": "Desenvolvedor full-stack com 4 anos de experiência e formação em Engenharia de Computação. Especializado em criar soluções eficientes e escaláveis, sempre em busca de inovação e desafios tecnológicos.",
+    "description_en": "A full-stack developer with 4 years of experience and a degree in Computer Engineering. I specialize in creating efficient and scalable solutions, always seeking innovation and technological challenges." 
+  },
   "about": {
     "title": "Sobre ",
     "title2": "mim",

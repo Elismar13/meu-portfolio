@@ -7,7 +7,7 @@ import { FaBriefcase, FaGraduationCap } from 'react-icons/fa';
 
 const Experience: React.FC = () => {
   const { color } = useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   return (
     <section id="experience" className="p-8">
@@ -34,9 +34,9 @@ const Experience: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold">{exp.title}</h3>
+                <h3 className="text-xl font-semibold">{i18n.language === 'pt' ? exp.title : exp.title_en}</h3>
                 <p className="text-gray-400 dark:text-gray-300">{exp.range} - {exp.institution}</p>
-                <p className="mt-1">{exp.description}</p>
+                <p className="mt-1">{i18n.language === 'pt' ? exp.description : exp.description_en}</p>
               </div>
             </div>
           ))}

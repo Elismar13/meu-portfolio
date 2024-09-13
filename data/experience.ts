@@ -15,8 +15,8 @@ export const experiences: ExperienceItem[] = [
     title: 'Analista de Sistemas',
     title_en: 'Systems Analyst',
     institution: 'Accenture',
-    description: 'Participei do processo de modernização tecnológica em um Banco, migrando aplicações monolíticas (IBM Integration Bus, Visual Basic) para microserviços (Java, Apache Camel, Spring, Quarkus, Docker). Atuei no desenvolvimento de microsserviços back-end para integração com um portal administrativo, utilizando Java, Spring Boot e Redis. Desenvolvi aplicações altamente disponíveis para funcionalidades de débito (Java, Quarkus), integrando diversas ferramentas de integração contínua, como Jenkins, Docker e Kubernetes, para garantir um ambiente robusto e eficiente.',
-    description_en: 'Participated in the technological modernization process at a bank, migrating monolithic applications (IBM Integration Bus, Visual Basic) to microservices (Java, Apache Camel, Spring, Quarkus, Docker). Worked on the development of back-end microservices for integration with an administrative portal, using Java, Spring Boot, and Redis. Developed highly available applications for debit functionalities (Java, Quarkus), integrating various continuous integration tools such as Jenkins, Docker, and Kubernetes to ensure a robust and efficient environment.'
+    description: 'Participei da modernização tecnológica em um banco, migrando aplicações monolíticas para uma arquitetura de microserviços. Atuei no desenvolvimento de microsserviços back-end para integração com um portal administrativo e criei aplicações de alta disponibilidade para funcionalidades de débito, utilizando metodologias ágeis e práticas de integração contínua para garantir um ambiente robusto e eficiente.',
+    description_en: 'I contributed to the technological modernization of a bank by migrating monolithic applications to a microservices architecture. I worked on back-end microservices for integrating an administrative portal and developed high-availability applications for debit functionalities, using agile methodologies and continuous integration practices to ensure a robust and efficient environment.'
   },
   {
     type: 'work',
