@@ -30,5 +30,9 @@
     "title2": "Projects",
     "description": "Here are some of my projects, including websites, APIs, apps, and more.",
     "viewProject": "View project"
+  },
+  "projectModal": {
+    "description": "Description: ",
+    "languages": "Techs: "
   }
 }

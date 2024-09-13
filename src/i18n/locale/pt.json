@@ -34,5 +34,9 @@
     "title2": "Projetos",
     "description": "Veja alguns dos meus projetos, incluindo sites, APIs, aplicativos e muito mais.",
     "viewProject": "Ver projeto"
+  },
+  "projectModal": {
+    "description": "Descrição: ",
+    "languages": "Tecnologias: "
   }
 }

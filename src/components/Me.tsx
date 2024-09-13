@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import ThemeContext from '../context/ThemeContext';
 import { COLORS } from '../constants/colors';
 import { useTranslation } from 'react-i18next';
-import { FaDiscord, FaGit, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaDiscord, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Me: React.FC = () => {
   const { color } = useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
@@ -18,14 +18,14 @@ const Me: React.FC = () => {
           {t('me.description')}
         </p>
         <div className="flex mt-4">
-          <a href="#linkedin" className="hover:text-blue-500 mx-2">
-            <FaLinkedin size={32} />
+          <a href="#linkedin" className="mx-2">
+            <FaLinkedin size={32} color={color} />
           </a>
-          <a href="#etc" className="hover:text-blue-500 mx-2">
-            <FaGithub size={32} />
+          <a href="#etc" className="mx-2">
+            <FaGithub size={32} color={color} />
           </a>
-          <a href="#discord" className="hover:text-blue-500 mx-2">
-            <FaDiscord size={32} />
+          <a href="#discord" className="mx-2">
+            <FaDiscord size={32} color={color} />
           </a>
         </div>
       </div>
