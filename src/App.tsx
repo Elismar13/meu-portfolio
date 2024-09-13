@@ -7,17 +7,20 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 import DarkModeToggle from './components/DarkModeToggle';
 import { ThemeProvider } from './context/ThemeContext';
+import { LanguageProvider } from './context/LanguageContext';
 
 function App() {
   return (
     <ThemeProvider>
-      <Header />
-      <Me />
-      <About />
-      <MyProjects />
-      <Experience />
-      <Contact />
-      <DarkModeToggle />
+      <LanguageProvider>
+        <Header />
+        <Me />
+        <About />
+        <MyProjects />
+        <Experience />
+        <Contact />
+        <DarkModeToggle />
+      </LanguageProvider>
     </ThemeProvider>
   );
 };
