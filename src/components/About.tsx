@@ -5,21 +5,23 @@ import { SiJavascript, SiPython, SiTypescript, SiExpress, SiSpring, SiFlask, SiQ
 import SkillCard from './SkillCard';
 import ThemeContext from '../context/ThemeContext';
 import { COLORS } from '../constants/colors';
+import { useTranslation } from 'react-i18next';
 
 const About: React.FC = () => {
   const { color } = useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
+  const { t } = useTranslation();
 
   return (
     <section id="about" className="w-full flex text-white py-8 px-8">
       <div className="max-w-4xl mx-auto">
-      <h2 className="text-4xl font-extrabold text-center mb-8">
-        About <span className="text-orange-500" style={{ color }}>Me</span>
-      </h2>
+        <h2 className="text-4xl font-extrabold text-center mb-8">
+          {t('about.title', { name: <span style={{ color }}>Me</span> })}
+        </h2>
         <p className="text-lg mb-6">
-          Olá, me chamo Elismar Silva e tenho 22 anos. Moro em Paraíba, Brasil.
+          {t('about.description')}
         </p>
 
-        <h3 className="text-2xl font-semibold text-center mb-4">Skills</h3>
+        <h3 className="text-2xl font-semibold text-center mb-4">{t('about.skillsTitle')}</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
           <SkillCard title="Frontend">
             <SiJavascript size={32} color={ color } />
@@ -45,20 +47,20 @@ const About: React.FC = () => {
           </SkillCard>
         </div>
 
-        <h3 className="text-2xl font-semibold text-center mb-4">Experience</h3>
+        <h3 className="text-2xl font-semibold text-center mb-4">{t('about.experienceTitle')}</h3>
         <p className="text-lg mb-8">
-          Tenho trabalhado em projetos diversos, desde aplicações web até serviços backend robustos. Minha experiência inclui trabalhar em equipes ágeis e fornecer soluções de alta qualidade.
+          {t('about.experienceDescription')}
         </p>
 
-        <h3 className="text-2xl font-semibold text-center mb-4">Projects</h3>
+        <h3 className="text-2xl font-semibold text-center mb-4">{t('about.projectsTitle')}</h3>
         <p className="text-lg">
-          Confira alguns dos meus projetos no GitHub e LinkedIn:
+          {t('about.projectsDescription')}
         </p>
         <div className="flex justify-center mt-6 space-x-6">
-          <a href="#github" className= " text-gray-700 dark:text-gray-100 hover:text-blue-500">
+          <a href="#github" className="text-gray-700 dark:text-gray-100 hover:text-blue-500" aria-label="GitHub">
             <SiGithub size={32} color={ color } />
           </a>
-          <a href="#linkedin" className="text-gray-700 dark:text-gray-100 hover:text-blue-500">
+          <a href="#linkedin" className="text-gray-700 dark:text-gray-100 hover:text-blue-500" aria-label="LinkedIn">
             <SiLinkedin size={32} color={ color } />
           </a>
         </div>

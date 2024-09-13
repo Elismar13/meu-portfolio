@@ -1,4 +1,5 @@
 import './App.css';
+import './i18n/i18n';
 import Me from './components/Me';
 import Header from './components/Header';
 import About from './components/About';
