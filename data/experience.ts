@@ -35,5 +35,14 @@ export const experiences: ExperienceItem[] = [
     institution: 'IFPB Campina Grande',
     description: 'Estudei vários aspectos da ciência da computação, incluindo algoritmos, estruturas de dados e desenvolvimento web. Tenho pesquisas na área, com artigos publicados, e meu TCC envolveu análise de dados e inteligência artificial.',
     description_en: 'Studied various aspects of computer science including algorithms, data structures, and web development. I have research in the field with published articles, and my thesis involved data analysis and artificial intelligence.',
+  },
+  {
+    type: 'education',
+    range: '04/2016 - 12/2018',
+    title: 'Técnico em Telecomunicações',
+    title_en: 'Telecommunications Technician',
+    institution: 'IFPB Campina Grande',
+    description: 'Estudei vários aspectos da ciência da computação, incluindo algoritmos, estruturas de dados e desenvolvimento web. Tenho pesquisas na área, com artigos publicados, e meu TCC envolveu análise de dados e inteligência artificial.',
+    description_en: 'Studied various aspects of computer science including algorithms, data structures, and web development. I have research in the field with published articles, and my thesis involved data analysis and artificial intelligence.',
   }
 ];
