@@ -20,5 +20,11 @@
     "email": "Email",
     "subject": "Subject",
     "message": "Message"
+  },
+  "projects": {
+    "title": "My ",
+    "title2": "Projects",
+    "description": "Here are some of my projects, including websites, APIs, apps, and more.",
+    "viewProject": "View project"
   }
 }

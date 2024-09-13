@@ -1,5 +1,5 @@
-// ProjectList.tsx
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Project } from '../../data/myProjects';
 import ProjectModal from './ProjectModal';
 
@@ -9,6 +9,7 @@ interface ProjectListProps {
 
 const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const { t } = useTranslation();
 
   const openModal = (project: Project) => {
     setSelectedProject(project);
@@ -37,7 +38,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
                 <button onClick={() => openModal(project)} className="text-blue-500 hover:underline">
-                  View Project
+                  {t('projects.viewProject')}
                 </button>
               </div>
             </div>
