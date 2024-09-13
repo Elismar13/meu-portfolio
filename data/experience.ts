@@ -1,31 +1,39 @@
 export interface ExperienceItem {
-    type: 'work' | 'education';
-    range: string;
-    title: string;
-    institution: string;
-    description: string;
+  type: 'work' | 'education';
+  range: string;
+  title: string;
+  title_en: string;
+  institution: string;
+  description: string;
+  description_en: string;
 }
 
 export const experiences: ExperienceItem[] = [
-    {
-        type: 'work',
-        range: '2020 - Present',
-        title: 'Full-Stack Developer',
-        institution: 'Tech Company',
-        description: 'Developing and maintaining web applications using React, Node.js, and other technologies.'
-    },
-    {
-        type: 'education',
-        range: '2016 - 2020',
-        title: 'Bachelor of Computer Science',
-        institution: 'University of Tech',
-        description: 'Studied various aspects of computer science including algorithms, data structures, and web development.'
-    },
-    {
-        type: 'education',
-        range: '2016 - 2020',
-        title: 'Bachelor of Computer Science',
-        institution: 'University of Tech',
-        description: 'Studied various aspects of computer science including algorithms, data structures, and web development.'
-    }
+  {
+    type: 'work',
+    range: '06/2021 - Present',
+    title: 'Analista de Sistemas',
+    title_en: 'Systems Analyst',
+    institution: 'Accenture',
+    description: 'Participei do processo de modernização tecnológica em um Banco, migrando aplicações monolíticas (IBM Integration Bus, Visual Basic) para microserviços (Java, Apache Camel, Spring, Quarkus, Docker). Atuei no desenvolvimento de microsserviços back-end para integração com um portal administrativo, utilizando Java, Spring Boot e Redis. Desenvolvi aplicações altamente disponíveis para funcionalidades de débito (Java, Quarkus), integrando diversas ferramentas de integração contínua, como Jenkins, Docker e Kubernetes, para garantir um ambiente robusto e eficiente.',
+    description_en: 'Participated in the technological modernization process at a bank, migrating monolithic applications (IBM Integration Bus, Visual Basic) to microservices (Java, Apache Camel, Spring, Quarkus, Docker). Worked on the development of back-end microservices for integration with an administrative portal, using Java, Spring Boot, and Redis. Developed highly available applications for debit functionalities (Java, Quarkus), integrating various continuous integration tools such as Jenkins, Docker, and Kubernetes to ensure a robust and efficient environment.'
+  },
+  {
+    type: 'work',
+    range: '04/2020 - 04/2021',
+    title: 'Full-Stack Developer',
+    title_en: 'Full-Stack Developer',
+    institution: 'Assert Campina Grande',
+    description: 'Implementação de um sistema de aquisição de dados em tempo real com Node.js utilizando o framework Express e Socket.io, para monitorar e realizar o controle constante de dispositivos baseados em Internet das Coisas (IoT), utilizando análise de dados.',
+    description_en: 'Implementation of a real-time data acquisition system with Node.js using the Express framework and Socket.io, to monitor and perform constant control of IoT (Internet of Things) devices, utilizing data analysis and scraping.'
+  },
+  {
+    type: 'education',
+    range: '02/2019 - 02/2024',
+    title: 'Bacharel em Engenharia de Computação',
+    title_en: 'Bachelor of Computer Engineering',
+    institution: 'IFPB Campina Grande',
+    description: 'Estudei vários aspectos da ciência da computação, incluindo algoritmos, estruturas de dados e desenvolvimento web. Tenho pesquisas na área, com artigos publicados, e meu TCC envolveu análise de dados e inteligência artificial.',
+    description_en: 'Studied various aspects of computer science including algorithms, data structures, and web development. I have research in the field with published articles, and my thesis involved data analysis and artificial intelligence.',
+  }
 ];

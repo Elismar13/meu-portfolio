@@ -25,9 +25,9 @@ const Experience: React.FC = () => {
                   style={{ backgroundColor: color }}
                 >
                   {exp.type === 'work' ? (
-                    <FaBriefcase size={20} className="text-gray-300" />
+                    <FaBriefcase size={20} className="text-white" />
                   ) : (
-                    <FaGraduationCap size={24} className="text-gray-300" />
+                    <FaGraduationCap size={24} className="text-white" />
                   )}
                 </div>
                 <div className="flex-grow w-0.5 bg-gray-300"></div>
@@ -35,7 +35,7 @@ const Experience: React.FC = () => {
 
               <div>
                 <h3 className="text-xl font-semibold">{exp.title}</h3>
-                <p className="text-gray-400">{exp.range} - {exp.institution}</p>
+                <p className="text-gray-400 dark:text-gray-300">{exp.range} - {exp.institution}</p>
                 <p className="mt-1">{exp.description}</p>
               </div>
             </div>
