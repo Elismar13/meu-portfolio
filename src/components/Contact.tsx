@@ -1,27 +1,28 @@
-import React, {  useContext } from 'react';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 import AnimatedButton from './AnimatedButton';
 import ThemeContext from '../context/ThemeContext';
 import { COLORS } from '../constants/colors';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const Contact: React.FC = () => {
-  const { color } = useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
+  const { color } = React.useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
+  const { t } = useTranslation();
 
   return (
     <section id="contact" className="w-full text-white p-8 flex justify-center">
       <div className="max-w-4xl w-full flex flex-col lg:flex-row justify-between">
         <div className="flex flex-col justify-center lg:w-1/3 w-full mb-8 lg:mb-0">
-          <h1 className="text-3xl font-bold mb-4">Get in <span style={{ color }}>Touch</span></h1>
-          <h3 className="text-2xl font-bold mb-4">Don't be Shy</h3>
+          <h1 className="text-3xl font-bold mb-4">{t('contact.title')} <span style={{ color }}>{t('contact.title2')}</span></h1>
           <p className="mb-4">
-            If you liked my work, please fill out the form on the side and send me an email. If you prefer, you can also contact me via WhatsApp below:
+            {t('contact.description')}
           </p>
           <div className="flex items-center mb-2">
             <FaWhatsapp size={28} color={color} />
             <div className="ml-3">
-              <span>WhatsApp</span>
+              <span>{t('contact.whatsapp')}</span>
               <br />
-              <span>(83) 98748-8476</span>
+              <span>{t('contact.phone')}</span>
             </div>
           </div>
         </div>
@@ -34,7 +35,7 @@ const Contact: React.FC = () => {
                   type="text"
                   id="name"
                   name="name"
-                  placeholder="Name"
+                  placeholder={t('contact.name')}
                   required
                 />
               </div>
@@ -44,7 +45,7 @@ const Contact: React.FC = () => {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Email"
+                  placeholder={t('contact.email')}
                   required
                 />
               </div>
@@ -54,7 +55,7 @@ const Contact: React.FC = () => {
                   id="subject"
                   name="subject"
                   rows={1}
-                  placeholder="Subject"
+                  placeholder={t('contact.subject')}
                   required
                 ></textarea>
               </div>
@@ -64,7 +65,7 @@ const Contact: React.FC = () => {
                   id="message"
                   name="message"
                   rows={4}
-                  placeholder="Message"
+                  placeholder={t('contact.message')}
                   required
                 ></textarea>
               </div>

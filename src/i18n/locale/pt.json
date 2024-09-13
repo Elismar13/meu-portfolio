@@ -1,11 +1,24 @@
 {
   "about": {
-    "title": "Sobre {{name}}",
+    "title": "Sobre ",
+    "title2": "mim",
     "description": "Olá, me chamo Elismar Silva e tenho 22 anos. Moro em Paraíba, Brasil.",
     "skillsTitle": "Habilidades",
     "experienceTitle": "Experiência",
     "experienceDescription": "Tenho trabalhado em projetos diversos, desde aplicações web até serviços backend robustos. Minha experiência inclui trabalhar em equipes ágeis e fornecer soluções de alta qualidade.",
     "projectsTitle": "Projetos",
     "projectsDescription": "Confira alguns dos meus projetos no GitHub e LinkedIn:"
+  },
+  "contact": {
+    "title": "Entre em ",
+    "title2": "Contato",
+    "subtitle": "Não Seja Tímido",
+    "description": "Se você gostou do meu trabalho, preencha o formulário ao lado e me envie um e-mail. Se preferir, você também pode me contatar via WhatsApp abaixo:",
+    "whatsapp": "WhatsApp",
+    "phone": "(83) 98748-8476",
+    "name": "Nome",
+    "email": "E-mail",
+    "subject": "Assunto",
+    "message": "Mensagem"
   }
 }

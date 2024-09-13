@@ -1,11 +1,24 @@
 {
   "about": {
-    "title": "About {{name}}",
+    "title": "About ",
+    "title2": "Me",
     "description": "Hello, my name is Elismar Silva and I am 22 years old. I live in Paraíba, Brazil.",
     "skillsTitle": "Skills",
     "experienceTitle": "Experience",
     "experienceDescription": "I have worked on a variety of projects, ranging from web applications to robust backend services. My experience includes working in agile teams and delivering high-quality solutions.",
     "projectsTitle": "Projects",
     "projectsDescription": "Check out some of my projects on GitHub and LinkedIn:"
+  },
+  "contact": {
+    "title": "Get in ",
+    "title2": "Touch",
+    "subtitle": "Don't be Shy",
+    "description": "If you liked my work, please fill out the form on the side and send me an email. If you prefer, you can also contact me via WhatsApp below:",
+    "whatsapp": "WhatsApp",
+    "phone": "(83) 98748-8476",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message"
   }
 }
