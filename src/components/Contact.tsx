@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import AnimatedButton from './AnimatedButton';
 import ThemeContext from '../context/ThemeContext';
@@ -6,8 +6,32 @@ import { COLORS } from '../constants/colors';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const Contact: React.FC = () => {
-  const { color } = React.useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
+  const { color } = useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
   const { t } = useTranslation();
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const { name, email, subject, message } = formData;
+
+    // Create the mailto link
+    const mailtoLink = `mailto:elismarsilva.5@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    )}`;
+
+    // Open the default email client
+    window.location.href = mailtoLink;
+  };
 
   return (
     <section id="contact" className="text-white p-8 flex justify-center">
@@ -32,8 +56,8 @@ const Contact: React.FC = () => {
             </div>
           </div>
           <div className="lg:w-2/3 w-full lg:ml-8">
-            <form className="rounded-2xl">
-              <div className="grid grid-cols-2 gap-x-5" >
+            <form className="rounded-2xl" onSubmit={handleSubmit}>
+              <div className="grid grid-cols-2 gap-x-5">
                 <div className="mb-4">
                   <input
                     className="w-full p-3 bg-gray-300 border rounded-2xl border-transparent placeholder-gray-600 text-black"
@@ -41,6 +65,8 @@ const Contact: React.FC = () => {
                     id="name"
                     name="name"
                     placeholder={t('contact.name')}
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -51,6 +77,8 @@ const Contact: React.FC = () => {
                     id="email"
                     name="email"
                     placeholder={t('contact.email')}
+                    value={formData.email}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -61,6 +89,8 @@ const Contact: React.FC = () => {
                     name="subject"
                     rows={1}
                     placeholder={t('contact.subject')}
+                    value={formData.subject}
+                    onChange={handleChange}
                     required
                   ></textarea>
                 </div>
@@ -71,6 +101,8 @@ const Contact: React.FC = () => {
                     name="message"
                     rows={4}
                     placeholder={t('contact.message')}
+                    value={formData.message}
+                    onChange={handleChange}
                     required
                   ></textarea>
                 </div>
@@ -80,7 +112,6 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
-
     </section>
   );
 };
