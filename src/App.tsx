@@ -7,6 +7,7 @@ import MyProjects from './components/MyProjects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import DarkModeToggle from './components/DarkModeToggle';
+import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Experience />
       <Contact />
       <DarkModeToggle />
+      <Footer />
     </ThemeProvider>
   );
 };
