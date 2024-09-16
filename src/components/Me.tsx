@@ -11,7 +11,15 @@ const Me: React.FC = () => {
   return (
     <section id="me" className="w-screen">
       <div className="flex flex-col h-screen p-8 text-center items-center justify-center max-w-4xl mx-auto">
-        <h1 className="text-6xl font-bold" style={{ color }}>
+        <h1 className="text-6xl font-bold relative w-[max-content]
+          before:absolute before:inset-0 before:animate-typewriter
+          before:bg-white
+          dark:before:bg-gray-950
+          after:absolute after:inset-0 after:w-[0.125em] after:animate-caret
+          after:bg-gray-950
+          dark:after:bg-white"
+          style={{ color }}
+        >
           Elismar Silva
         </h1>
         <p className="mt-2 mb-4">

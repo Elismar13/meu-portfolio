@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import ThemeContext from '../context/ThemeContext';
 import { COLORS } from '../constants/colors';
