@@ -1,7 +1,5 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import ThemeContext from '../context/ThemeContext';
-import { COLORS } from '../constants/colors';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import NavLinks from './NavLinks';
 
@@ -38,7 +36,6 @@ const HamburgerMenu = ({  isOpen,  toggleMenu }: {
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isActive, setIsActive] = useState('#me');
-  const { color } = useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
   const { t } = useTranslation();
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);

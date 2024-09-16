@@ -5,7 +5,12 @@ import { FiSun, FiMoon, FiSettings } from 'react-icons/fi';
 import { FaTimes, FaPalette } from 'react-icons/fa';
 
 const DarkModeToggle: React.FC = () => {
-  const { theme, color, toggleTheme, setColor } = useContext(ThemeContext);
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error('ThemeContext must be used within a ThemeProvider');
+  }
+
+  const { theme, color, toggleTheme, setColor } = context;
   const [isOpen, setIsOpen] = useState(true);
   const [selectedColor, setSelectedColor] = useState<string>(color);
 
