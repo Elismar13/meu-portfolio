@@ -12,7 +12,7 @@ const Experience: React.FC = () => {
   return (
     <section id="experience" className="p-8">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center">
+        <h2 className="text-4xl font-bold text-center">
           {t('experience.title')}
           <span style={{ color }}>{t('experience.title2')}</span>
         </h2>
