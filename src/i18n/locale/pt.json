@@ -1,7 +1,8 @@
 {
   "header": {
-    "home": "About",
+    "home": "Sobre",
     "projects": "Projetos",
+    "education": "Experiência",
     "resume": "Meu curriculo",
     "contact": "Contato"
   },
@@ -12,7 +13,7 @@
     "title": "Sobre ",
     "title2": "mim",
     "description": "Olá, me chamo Elismar Silva e tenho 22 anos. Moro em Paraíba, Brasil.",
-    "skillsTitle": "Habilidades",
+    "skillsTitle": "Tecnologias",
     "experienceTitle": "Experiência",
     "experienceDescription": "Tenho trabalhado em projetos diversos, desde aplicações web até serviços backend robustos. Minha experiência inclui trabalhar em equipes ágeis e fornecer soluções de alta qualidade.",
     "projectsTitle": "Projetos",

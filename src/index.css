@@ -20,6 +20,7 @@
 
 html {
   @apply bg-white text-gray-700;
+  scroll-behavior: smooth;
 }
 html.dark {
   @apply bg-gray-950 text-gray-100;
