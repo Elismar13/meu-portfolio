@@ -1,15 +1,26 @@
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin-bottom: 5px;
+  background: white;
+  transition: all 0.3s ease-in-out;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hamburger.open .hamburger-top {
+  transform: translateY(7px) rotate(45deg);
 }
+.hamburger.open .hamburger-middle {
+  opacity: 0;
+}
+.hamburger.open .hamburger-bottom {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 
 @keyframes logo-spin {
   from {

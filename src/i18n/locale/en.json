@@ -1,4 +1,13 @@
 {
+  "header": {
+    "home": "About",
+    "projects": "Projects",
+    "resume": "My resume",
+    "contact": "Contact"
+  },
+  "me": {
+    "description": "A full-stack developer with 4 years of experience and a degree in Computer Engineering. I specialize in creating efficient and scalable solutions, always seeking innovation and technological challenges."
+  },
   "about": {
     "title": "About ",
     "title2": "Me",
