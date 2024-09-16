@@ -57,14 +57,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
           </li>
           <li className="mb-2">
             <span className="text-base font-semibold">Github: </span>
-            <a className="font-normal text-gray-700 dark:text-gray-100 hover:underline" target="_blank" rel="noopener noreferrer">
+            <a className="font-normal text-gray-700 dark:text-gray-100 hover:underline" href={project.github} target="_blank" rel="noopener noreferrer">
               {project.github}
             </a>
           </li>
           {project.deploy && (
             <li className="mb-2">
               <span className="text-base font-semibold">Deploy: </span>
-              <a className="font-normal text-gray-700 dark:text-gray-100 hover:underline" target="_blank" rel="noopener noreferrer">
+              <a className="font-normal text-gray-700 dark:text-gray-100 hover:underline" href={project.deploy} rel="noopener noreferrer">
                 {project.deploy}
               </a>
             </li>

@@ -12,15 +12,15 @@
   "about": {
     "title": "About ",
     "title2": "Me",
-    "description": "Hello, my name is Elismar Silva and I am 22 years old. I live in Paraíba, Brazil.",
+    "description": "I’m Elismar Silva Pereira, 22 years old and I live in Paraíba, Brazil. I love to crafting innovative solutions and am always exploring the latest tech trends. When I’m not coding, I’m a self-proclaimed nerd, diving into games, books, and anime. I also enjoy contributing to open source projects and have a keen interest in data analysis. Always up for a new challenge, I find joy in a good cup of coffee ☕ and taking time to relax and unwind!",
     "skillsTitle": "Skills",
     "experienceTitle": "Experience",
-    "experienceDescription": "I have worked on a variety of projects, ranging from web applications to robust backend services. My experience includes working in agile teams and delivering high-quality solutions.",
+    "experienceDescription": "Throughout my career, I have contributed to developing solutions that enhanced the scalability and performance of applications, and implemented innovative features that directly impacted user experience. My journey includes creating microservices, specifying and documenting APIs, integrating systems, designing system architectures, and configuring CI/CD pipelines, always aiming to optimize processes and ensure the delivery of robust applications. I am continually seeking new challenges to apply and expand my technical skills.",
     "projectsTitle": "Projects",
     "projectsDescription": "Check out some of my projects on GitHub and LinkedIn:"
   },
   "contact": {
-    "talk": "Talk to",
+    "talk": "Talk to ",
     "talk2": "me",
     "title": "Get in ",
     "title2": "Touch",

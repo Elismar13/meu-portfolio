@@ -21,7 +21,7 @@ export const experiences: ExperienceItem[] = [
   {
     type: 'work',
     range: '04/2020 - 04/2021',
-    title: 'Full-Stack Developer',
+    title: 'Desenvolvedor Full-Stack',
     title_en: 'Full-Stack Developer',
     institution: 'Assert Campina Grande',
     description: 'Implementação de um sistema de aquisição de dados em tempo real com Node.js utilizando o framework Express e Socket.io, para monitorar e realizar o controle constante de dispositivos baseados em Internet das Coisas (IoT), utilizando análise de dados.',
@@ -33,16 +33,16 @@ export const experiences: ExperienceItem[] = [
     title: 'Bacharel em Engenharia de Computação',
     title_en: 'Bachelor of Computer Engineering',
     institution: 'IFPB Campina Grande',
-    description: 'Estudei vários aspectos da ciência da computação, incluindo algoritmos, estruturas de dados e desenvolvimento web. Tenho pesquisas na área, com artigos publicados, e meu TCC envolveu análise de dados e inteligência artificial.',
-    description_en: 'Studied various aspects of computer science including algorithms, data structures, and web development. I have research in the field with published articles, and my thesis involved data analysis and artificial intelligence.',
+    description: 'Estudei vários aspectos da ciência da computação, incluindo algoritmos, estruturas de dados e desenvolvimento web. Tenho pesquisas na área, com artigos publicados na área de embarcados e visão computacional. O meu TCC envolveu análise de dados e inteligência artificial.',
+    description_en: 'I studied various aspects of computer science, including algorithms, data structures, and web development. I have conducted research in the field, with published articles on embedded systems and computer vision. My thesis involved data analysis and artificial intelligence.',
   },
   {
     type: 'education',
     range: '04/2016 - 12/2018',
     title: 'Técnico em Telecomunicações',
     title_en: 'Telecommunications Technician',
-    institution: 'IFPB Campina Grande',
-    description: 'Estudei vários aspectos da ciência da computação, incluindo algoritmos, estruturas de dados e desenvolvimento web. Tenho pesquisas na área, com artigos publicados, e meu TCC envolveu análise de dados e inteligência artificial.',
+    institution: 'Escola Técnica Redentorista',
+    description: 'Durante o curso de Técnico em Telecomunicações, desenvolvi uma sólida base em redes de comunicação, sistemas de transmissão de dados e tecnologias emergentes no campo das telecomunicações. Esse conhecimento me ajudou a integrar e otimizar soluções tecnológicas no campo da tecnologia da informação.',
     description_en: 'Studied various aspects of computer science including algorithms, data structures, and web development. I have research in the field with published articles, and my thesis involved data analysis and artificial intelligence.',
   }
 ];

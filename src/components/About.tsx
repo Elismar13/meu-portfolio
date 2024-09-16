@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 const About: React.FC = () => {
   const { color } = useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
   const { t } = useTranslation();
+  const description: string[] = t("about.description").split("\n");
 
   return (
     <section id="about" className="w-full flex text-white py-8 px-8">
@@ -17,11 +18,13 @@ const About: React.FC = () => {
         <h2 className="text-4xl font-extrabold text-center mb-8">
           {t('about.title', { name: <span style={{ color }}>Me</span> })}
         </h2>
-        <p className="text-lg mb-6">
-          {t('about.description')}
-        </p>
+        {description.map((paragraph, index) =>
+          <p key={index} className="text-lg text-justify">
+            {paragraph}
+          </p>
+        )}
 
-        <h3 className="text-2xl font-semibold text-center mb-4">{t('about.skillsTitle')}</h3>
+        <h3 className="mt-6 text-2xl font-semibold text-center mb-4">{t('about.skillsTitle')}</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
           <SkillCard title="Frontend">
             <SiJavascript size={32} color={ color } />
