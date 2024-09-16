@@ -23,9 +23,9 @@ const ExperienceComponent: React.FC<ExperienceComponentProps> = ({ index, exp })
           style={{ backgroundColor: color }}
         >
           {exp.type === 'work' ? (
-            <FaBriefcase size={20} className="text-gray-300" />
+            <FaBriefcase size={20} className="text-gray-100" />
           ) : (
-            <FaGraduationCap size={24} className="text-gray-300" />
+            <FaGraduationCap size={24} className="text-gray-100" />
           )}
         </div>
         <div className="flex-grow w-0.5 bg-gray-300"></div>

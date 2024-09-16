@@ -16,7 +16,7 @@ const Experience: React.FC = () => {
           {t('experience.title')}
           <span style={{ color }}>{t('experience.title2')}</span>
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           <div>
             {experiences.filter((exp) => exp.type === 'work').map((exp, index) => (
               <ExperienceComponent index={index} exp={exp} />

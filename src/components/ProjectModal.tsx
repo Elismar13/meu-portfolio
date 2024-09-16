@@ -12,7 +12,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   const { i18n, t } = useTranslation();
   const { language } = i18n;
 
-
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
       <div className="relative bg-white dark:bg-gray-800 p-6 text-left rounded-2xl shadow-lg max-w-md w-full">
