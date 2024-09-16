@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import ExperienceComponent from './ExperienceItem';
 import ThemeContext from '../context/ThemeContext';
 import { COLORS } from '../constants/colors';
-import { experiences } from '../../data/experience';
+import { experiences } from '../data/experience';
 
 const Experience: React.FC = () => {
   const { color } = useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };

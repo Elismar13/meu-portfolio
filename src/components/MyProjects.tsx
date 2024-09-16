@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import ProjectList from './ProjectList';
-import { projects } from '../../data/myProjects';
+import { projects } from '../data/myProjects';
 import { COLORS } from '../constants/colors';
 import ThemeContext from '../context/ThemeContext';
 

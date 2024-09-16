@@ -1,3 +1,9 @@
+import ASM from '../assets/asmonitor.png';
+import GETHUB from '../assets/gethub.png';
+import HOME from '../assets/inhome.png';
+import OPENSNAKE from '../assets/opensnake.png';
+import TRANSACTION from '../assets/transaction.png';
+
 export interface Project {
   title: string;
   description: string;
@@ -14,7 +20,7 @@ export const projects: Project[] = [
     description: "Um sistema de monitoramento sobre informações do seu computador, tudo isso diretamente do terminal.",
     description_en: "A monitoring system for information about your computer, all directly from the terminal.",
     github: "https://github.com/Elismar13/ASMonitor",
-    image: "../src/assets/asmonitor.png",
+    image: ASM,
     technologies: ["Node.js", "Blessed"],
   },
   {
@@ -22,7 +28,7 @@ export const projects: Project[] = [
     description: "Uma aplicação mobile para consultar informações e repositórios publicos de desenvolvedores no Github.",
     description_en: "A mobile application to consult information and public repositories of developers on Github.",
     github: "https://github.com/Matheus-0/GetHub",
-    image: "../src/assets/gethub.png",
+    image: GETHUB,
     technologies: ["React Native", "Expo"],
   },
   {
@@ -30,15 +36,15 @@ export const projects: Project[] = [
     description: "inHome é um aplicativo para monitoramento e controle de ambientes.",
     description_en: "inHome is an application for monitoring and controlling environments.",
     github: "https://github.com/Elismar13/inHome_backend",
-    image: "../src/assets/inhome.png",
+    image: HOME,
     technologies: ["React", "Java"],
   },
   {
     title: "Transaction balance",
     description: "Sistema de orçamento utilizando Java, Apache Kafka, CQRS e Quarkus.",
     description_en: "Budgeting system using Java, Apache Kafka, CQRS, and Quarkus.",
-    github: "link_projeto",
-    image: "../src/assets/transaction.png",
+    github: "https://github.com/Elismar13/transaction-balance",
+    image: TRANSACTION,
     technologies: ["Java", "Quarkus", "CQRS", "Apache Kafka"],
   },
   {
@@ -46,7 +52,7 @@ export const projects: Project[] = [
     description: "Jogo da cobrinha desenvolvido do zero sem um motor gráfico, feito em C++ com a biblioteca OpenGL.",
     description_en: "Snake game developed from scratch without a game engine, made in C++ with the OpenGL library.",
     github: "https://github.com/Elismar13/OpenSnake",
-    image: "../src/assets/opensnake.png",
+    image: OPENSNAKE,
     technologies: ["C++", "OpenGL", "GLUT"],
   }
 ];
