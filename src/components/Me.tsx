@@ -26,10 +26,10 @@ const Me: React.FC = () => {
           {t('me.description')}
         </p>
         <div className="flex mt-4">
-          <a href="#linkedin" className="mx-2">
+          <a href="https://www.linkedin.com/in/elismarsilva/" target='_blank' rel="noopener noreferrer" className="mx-2">
             <FaLinkedin size={32} color={color} />
           </a>
-          <a href="#etc" className="mx-2">
+          <a href="https://github.com/Elismar13" target='_blank' rel="noopener noreferrer" className="mx-2">
             <FaGithub size={32} color={color} />
           </a>
           <a href="#discord" className="mx-2">

@@ -80,7 +80,7 @@ const Header: React.FC = () => {
       </nav>
 
       <div className="flex items-center space-x-4">
-        <a href="https://drive.google.com/file/d/1q0E0QFIj_g4mJ0u0WrjQbfXv_e4PsIgy/view?usp=sharing" target='_blank' className="text-white hover:text-blue-500">
+        <a href="https://docs.google.com/document/d/e/2PACX-1vQAfyqsICbaj0FUktcR8wuFJ2SYNbnzYcsi7WmVkAnEh1Dp__RbrEWprxkHiJ2BOqxtik3QsV9YGcCV/pub" target='_blank' rel="noopener noreferrer" className="text-white hover:text-blue-500">
           {t("header.resume")}
         </a>
         <LanguageToggle />
