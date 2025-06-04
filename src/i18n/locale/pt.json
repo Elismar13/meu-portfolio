@@ -46,5 +46,8 @@
   "projectModal": {
     "description": "Descrição: ",
     "languages": "Tecnologias: "
+  },
+  "footer": {
+    "description": "Feito com ❤️ por Elismar Silva"
   }
 }

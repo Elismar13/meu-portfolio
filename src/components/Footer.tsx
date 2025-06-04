@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Divider: React.FC = () => {
   return (
@@ -9,13 +10,13 @@ const Divider: React.FC = () => {
 };
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+  
   return (
     <footer className="block justify-center py-8">
       <Divider />
       <div className="pt-8 text-center">
-        <p>
-          Feito com amor por Elismar Silva <span role="img" aria-label="heart">❤️</span>
-        </p>
+        <p>{t('footer.description')}</p>
       </div>
     </footer>
   );
