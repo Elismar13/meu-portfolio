@@ -16,7 +16,8 @@ const About: React.FC = () => {
     <section id="about" className="w-full flex text-white py-8 px-8">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-extrabold text-center mb-8">
-          {t('about.title', { name: <span style={{ color }}>Me</span> })}
+          {t('about.title')}
+          <span style={{ color }}>{t('about.title2')}</span>
         </h2>
         {description.map((paragraph, index) =>
           <p key={index} className="text-lg text-justify">
