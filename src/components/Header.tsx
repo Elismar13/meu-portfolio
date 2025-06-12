@@ -6,95 +6,85 @@ import NavLinks from './NavLinks';
 const LanguageToggle = () => {
   const { i18n } = useTranslation();
 
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
+  const changeLanguage = () => {
+    i18n.changeLanguage(i18n.language === 'pt' ? 'en' : 'pt');
   };
 
   return (
-    <button
-      onClick={() => changeLanguage(i18n.language === 'pt' ? 'en' : 'pt')}
-      className="font-medium hover:text-blue-500"
-    >
+    <button onClick={changeLanguage} className="font-medium hover:text-blue-500">
       {i18n.language === 'pt' ? 'English version' : 'Em Português'}
     </button>
   );
 };
 
-const HamburgerMenu = ({  isOpen,  toggleMenu }: {
+const HamburgerMenu = ({
+  isOpen,
+  toggleMenu,
+}: {
   isOpen: boolean;
   toggleMenu: () => void;
-}) => {
-  return (
-    <div className="contents sm:hidden">
-      <button onClick={toggleMenu}>
-        {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-      </button>
-    </div>
-  );
-};
+}) => (
+  <div className="contents sm:hidden">
+    <button onClick={toggleMenu}>
+      {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+    </button>
+  </div>
+);
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isActive, setIsActive] = useState('#me');
+  const [activeSection, setActiveSection] = useState('#about');
   const { t } = useTranslation();
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
-
   const handleScroll = () => {
     const sections = document.querySelectorAll('section');
-    let currentSection = null;
+    let current = '';
 
-    for (const section of sections) {
-      const rect = section.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      const visibleThreshold = 0.50;
-  
-      if (rect.bottom >= windowHeight * visibleThreshold && rect.top <= windowHeight * (1 - visibleThreshold)) {
-        currentSection = section;
-        break;
+    const scrollY = window.scrollY + window.innerHeight / 2;
+
+    sections.forEach((section) => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      if (scrollY >= top && scrollY < top + height) {
+        current = `#${section.id}`;
       }
-    }
+    });
 
-    if (currentSection && currentSection.id) {
-      setIsActive(`#${currentSection.id}`);
-    } else {
-      setIsActive('');
-    }
+    if (current && current !== activeSection) setActiveSection(current);
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [isActive]); 
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [activeSection]);
 
   return (
     <header className="fixed top-0 z-50 flex justify-between items-center w-full p-4 bg-black text-white">
       <HamburgerMenu isOpen={menuOpen} toggleMenu={toggleMenu} />
 
       <nav className="hidden sm:flex space-x-4">
-        <NavLinks activeSection={isActive} />
+        <NavLinks activeSection={activeSection} closeMenu={() => setMenuOpen(false)} />
       </nav>
 
       <div className="flex items-center space-x-4">
-        <a href="https://docs.google.com/document/d/e/2PACX-1vQAfyqsICbaj0FUktcR8wuFJ2SYNbnzYcsi7WmVkAnEh1Dp__RbrEWprxkHiJ2BOqxtik3QsV9YGcCV/pub" target='_blank' rel="noopener noreferrer" className="text-white hover:text-blue-500">
-          {t("header.resume")}
+        <a
+          href="https://docs.google.com/document/d/e/2PACX-1vQAfyqsICbaj0FUktcR8wuFJ2SYNbnzYcsi7WmVkAnEh1Dp__RbrEWprxkHiJ2BOqxtik3QsV9YGcCV/pub"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-blue-500"
+        >
+          {t('header.resume')}
         </a>
         <LanguageToggle />
       </div>
 
       {menuOpen && (
-        <div
-          className={`absolute top-14 left-0 w-full bg-black p-4 sm:hidden 
-              transition-all duration-700 ease-in-out
-              ${menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}`}
-        >
-          <NavLinks activeSection={isActive} closeMenu={toggleMenu} />
+        <div className="absolute top-14 left-0 w-full bg-black p-4 sm:hidden transition-all duration-700 ease-in-out">
+          <NavLinks activeSection={activeSection} closeMenu={() => setMenuOpen(false)} />
         </div>
       )}
-
     </header>
   );
 };

@@ -3,12 +3,13 @@ import { useTranslation } from 'react-i18next';
 import ThemeContext from '../context/ThemeContext';
 import { COLORS } from '../constants/colors';
 
-const NavLinks = ({ activeSection,
-  closeMenu }: {
-    activeSection?: string,
-    closeMenu?: () => void
-  }) => {
-
+const NavLinks = ({
+  activeSection,
+  closeMenu,
+}: {
+  activeSection?: string;
+  closeMenu?: () => void;
+}) => {
   const { t } = useTranslation();
   const { color } = useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
 
@@ -22,7 +23,6 @@ const NavLinks = ({ activeSection,
   const scrollToSection = (id: string) => {
     const section = document.querySelector(id);
     const header = document.getElementsByTagName('header')[0];
-
     if (section) {
       const headerOffset = header ? header.offsetHeight : 50;
       const elementPosition = section.getBoundingClientRect().top;
@@ -33,23 +33,23 @@ const NavLinks = ({ activeSection,
         behavior: 'smooth',
       });
     }
-
     closeMenu?.();
   };
 
   return (
     <>
-      {links.map((link) => (
+      {links.map(({ id, label }) => (
         <a
-          key={link.id}
-          href={`#${link.id}`}
+          key={id}
+          href={`#${id}`}
           className="block sm:inline cursor-pointer text-white hover:text-blue-500"
-          style={activeSection === `#${link.id}` ? { color } : {}}
-          onClick={() => {
-            scrollToSection(`#${link.id}`);
+          style={activeSection === `#${id}` ? { color } : {}}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection(`#${id}`);
           }}
         >
-          {link.label}
+          {label}
         </a>
       ))}
     </>
