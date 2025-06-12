@@ -14,38 +14,32 @@ export default {
         CUSTOM_ORANGE: '#f6993f',
         CUSTOM_CYAN: '#00bcd4',
         CUSTOM_MAGENTA: '#e91e63',
-      }
-    },
-    animation: {
-      typewriter: 'typewriter 2s steps(11) forwards',
-      caret: 'typewriter 2s steps(11) forwards, blink 1s steps(11) infinite 2s',
-    },
-    keyframes: {
-      typewriter: {
-        to: {
-          left: '100%',
+      },
+      animation: {
+        typewriter: 'typewriter 2s steps(11) forwards',
+        caret: 'typewriter 2s steps(11) forwards, blink 1s steps(11) infinite 2s',
+        'bounce-smooth': 'button-bounce 1.5s ease-in-out infinite',
+      },
+      keyframes: {
+        typewriter: {
+          to: {
+            left: '100%',
+          },
+        },
+        blink: {
+          '0%': { opacity: '0' },
+          '0.1%': { opacity: '1' },
+          '50%': { opacity: '1' },
+          '50.1%': { opacity: '0' },
+          '100%': { opacity: '0' },
+        },
+        'button-bounce': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(10px)' },
         },
       },
-      blink: {
-        '0%': {
-          opacity: '0',
-        },
-        '0.1%': {
-          opacity: '1',
-        },
-        '50%': {
-          opacity: '1',
-        },
-        '50.1%': {
-          opacity: '0',
-        },
-        '100%': {
-          opacity: '0',
-        },
-      }
-    }
+    },
   },
   plugins: [],
   darkMode: 'class',
 }
-

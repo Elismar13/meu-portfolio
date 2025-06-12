@@ -3,6 +3,7 @@ import ThemeContext from '../context/ThemeContext';
 import { COLORS } from '../constants/colors';
 import { useTranslation } from 'react-i18next';
 import { FaDiscord, FaGithub, FaLinkedin } from 'react-icons/fa';
+import ScrollIndicator from './ScrollIndicator';
 
 const Me: React.FC = () => {
   const { color } = useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
@@ -10,6 +11,7 @@ const Me: React.FC = () => {
 
   return (
     <section id="me" className="w-screen">
+
       <div className="flex flex-col h-screen p-8 text-center items-center justify-center max-w-4xl mx-auto">
         <h1 className="text-6xl font-bold relative w-[max-content]
           before:absolute before:inset-0 before:animate-typewriter
@@ -37,6 +39,8 @@ const Me: React.FC = () => {
           </a>
         </div>
       </div>
+
+      <ScrollIndicator />
     </section>
 
   );
