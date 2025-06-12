@@ -15,27 +15,40 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
+
     if (savedTheme) {
       setTheme(savedTheme);
       document.documentElement.classList.add(savedTheme);
     } else {
-      const defaultTheme = 'light';
-      setTheme(defaultTheme);
-      document.documentElement.classList.add(defaultTheme);
+      const prefersDark = window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      const systemTheme = prefersDark ? 'dark' : 'light';
+      setTheme(systemTheme);
+      document.documentElement.classList.add(systemTheme);
+    }
+
+    const savedColor = localStorage.getItem('color');
+    if (savedColor) {
+      setColor(savedColor);
+      document.documentElement.style.setProperty('--highlight-color', savedColor);
+    } else {
+      document.documentElement.style.setProperty('--highlight-color', '#3490dc');
     }
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
     document.documentElement.classList.remove(theme);
     document.documentElement.classList.add(newTheme);
+    setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
   };
 
   const changeColor = (newColor: string) => {
     setColor(newColor);
     document.documentElement.style.setProperty('--highlight-color', newColor);
+    localStorage.setItem('color', newColor);
   };
 
   return (
