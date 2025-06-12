@@ -31,7 +31,8 @@
     "name": "Name",
     "email": "Email",
     "subject": "Subject",
-    "message": "Message"
+    "message": "Message",
+    "send": "Send"
   },
   "experience": {
     "title": "Experience & ",
