@@ -85,7 +85,7 @@ To run this project locally:
     npm run build
     ```
 
-:memo: License
+## :memo: License
 
 This project is under the MIT license. See the LICENSE file for details.
 
