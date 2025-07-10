@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import ExperienceComponent from './ExperienceItem';
 import { COLORS } from '../constants/colors';
 import { fetchExperience } from '../services/cmsService';
 import { ExperienceItem } from '../interface/experience';
+import ThemeContext from '../context/ThemeContext';
 
 const Experience: React.FC = () => {
+  const { color } = useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
   const [experiences, setExperiences] = useState<ExperienceItem[]>([]);
   const { t } = useTranslation();
 
@@ -22,7 +24,7 @@ const Experience: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold text-center">
           {t('experience.title')}
-          <span style={{ color: COLORS.CUSTOM_BLUE }}>{t('experience.title2')}</span>
+          <span style={{ color }}>{t('experience.title2')}</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           <div>
