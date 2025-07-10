@@ -46,7 +46,8 @@
   },
   "projectModal": {
     "description": "Description: ",
-    "languages": "Techs: "
+    "languages": "Techs: ",
+    "viewOnGithub": "View on GitHub"
   },
   "footer": {
     "description": "Made with ❤️ by Elismar Silva"
