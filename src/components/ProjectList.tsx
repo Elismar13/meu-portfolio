@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Project } from '../interface/myProjects';
+import { Project } from '../interface/projects';
 import ProjectModal from './ProjectModal';
 
 interface ProjectListProps {
