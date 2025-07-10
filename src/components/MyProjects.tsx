@@ -1,13 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ProjectList from './ProjectList';
-import { projects } from '../data/myProjects';
 import { COLORS } from '../constants/colors';
 import ThemeContext from '../context/ThemeContext';
+import { fetchMyProjects } from '../services/cmsService';
+import { Project } from '../interface/projects';
 
 const MyProjects: React.FC = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
   const { color } = useContext(ThemeContext) || { color: COLORS.CUSTOM_BLUE };
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const data = await fetchMyProjects();
+      setProjects(data);
+    };
+    fetchProjects();
+  }, []);
 
   return (
     <section id="projects" className="w-full flex flex-col items-center justify-center text-white p-8">

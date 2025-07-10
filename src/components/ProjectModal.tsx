@@ -1,5 +1,5 @@
 import React from 'react';
-import { Project } from '../data/myProjects';
+import { Project } from '../interface/projects';
 import { FaMinus, FaTimes } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { FaBriefcase, FaGraduationCap } from 'react-icons/fa';
 import ThemeContext from '../context/ThemeContext';
 import { COLORS } from '../constants/colors';
-import { ExperienceItem } from '../data/experience';
+import { ExperienceItem } from '../interface/experience';
 
 interface ExperienceComponentProps {
   index: number;
