@@ -11,7 +11,7 @@ const DarkModeToggle: React.FC = () => {
   }
 
   const { theme, color, toggleTheme, setColor } = context;
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [selectedColor, setSelectedColor] = useState<string>(color);
 
   const applyColor = (color: string) => {

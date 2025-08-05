@@ -28,26 +28,26 @@ const About: React.FC = () => {
         <h3 className="mt-6 text-2xl font-semibold text-center mb-4">{t('about.skillsTitle')}</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
           <SkillCard title="Frontend">
-            <SiJavascript size={32} color={ color } />
-            <SiReact size={32} color={ color } />
-            <SiAngular size={32} color={ color } />
-            <SiTypescript size={32} color={ color } />
-            <SiHtml5 size={32} color={ color } />
-            <SiCss3 size={32} color={ color } />
+            <SiJavascript size={32} color={color} title='JavaScript' aria-label='JavaScript' />
+            <SiReact size={32} color={color} title='React' aria-label='React' />
+            <SiAngular size={32} color={color} title='Angular' aria-label='Angular' />
+            <SiTypescript size={32} color={color} title='TypeScript' aria-label='TypeScript' />
+            <SiHtml5 size={32} color={color} title='HTML5' aria-label='HTML5' />
+            <SiCss3 size={32} color={color} title='CSS3' aria-label='CSS3' />
           </SkillCard>
           <SkillCard title="Backend">
-            <FaJava size={32} color={ color } />
-            <SiNodedotjs size={32} color={ color } />
-            <SiPython size={32} color={ color } />
-            <SiSpring size={32} color={ color } />
-            <SiQuarkus size={32} color={ color } />
-            <SiExpress size={32} color={ color } />
-            <SiFlask size={32} color={ color } />
+            <FaJava size={32} color={color} title='Java' aria-label='Java' />
+            <SiNodedotjs size={32} color={color} title='Node.js' aria-label='Node.js' />
+            <SiPython size={32} color={color} title='Python' aria-label='Python' />
+            <SiSpring size={32} color={color} title='Spring' aria-label='Spring' />
+            <SiQuarkus size={32} color={color} title='Quarkus' aria-label='Quarkus' />
+            <SiExpress size={32} color={color} title='Express' aria-label='Express' />
+            <SiFlask size={32} color={color} title='Flask' aria-label='Flask' />
           </SkillCard>
           <SkillCard title="Databases">
-            <SiPostgresql size={32} color={ color } />
-            <SiMongodb size={32} color={ color } />
-            <FaDatabase size={32} color={ color } />
+            <SiPostgresql size={32} color={color} title='PostgreSQL' aria-label='PostgreSQL' />
+            <SiMongodb size={32} color={color} title='MongoDB' aria-label='MongoDB' />
+            <FaDatabase size={32} color={color} title='Database' aria-label='Database' />
           </SkillCard>
         </div>
 
